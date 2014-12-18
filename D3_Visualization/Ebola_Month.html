@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Ebola Stastics</title>
+    <style type="text/css">
+        header {
+background-color:black;
+color:white;
+text-align:center;
+padding:5px; 
+}
+        #tb1 {
+	font-family: verdana,arial,sans-serif;
+	font-size:13px;
+	color:#222222;
+	border-color: #a9c6c9;
+	border-collapse: collapse;
+}
+#tb1 th {
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+
+nav {
+line-height:30px;
+background-color:#9c5678;
+height:550px;
+width:275px;
+float:left;
+padding:5px; 
+}
+section {
+width:500px;
+float: left;
+padding:10px; 
+}
+    </style>
+	
+	<script type="text/javascript">
+	// This function visualizes the data and redirect to that particular month web page
+	function getmeVisualization()
+	{
+	var month = document.getElementById("month").value;
+	//alert(month);
+	if(month == "Nov") {
+	window.location.assign("http://localhost:8888/EbolaNovAggregate.html");
+	alert("nov");
+	}
+	else if(month == "Dec")
+	window.location.assign("http://localhost:8888/EbolaDecAggregate.html");
+	}
+	</script>
+</head>
+<body>
+     <header>
+  <h1>Ebola Tweets Stastics</h1> 
+   </header>
+   <nav>
+   <br />
+   <br />
+   <h3 align="center">Ebola Statistics</h3>
+   <p>Here You can see the Ebola Statistics by selecting Month. This stastics is shown by analyzing Twitter Tweets about Ebola</p>
+   </nav>
+   <section>
+    <form id="form1" runat="server">
+	<div>
+	<table id="tb1">
+	<tr>
+	<tr>
+	<th>Ebola Statstics for November </th>
+	<th><a href="http://localhost:8888/EbolaNovAggregate.html">Click Here </a></th>
+	</tr>
+	<tr>
+	<th>Ebola Statstics for December </th>
+	<th><a href="http://localhost:8888/EbolaNovAggregate.html">Click Here</a></th>
+	</tr>
+	<tr>
+	<th>Ebola Total Statstics Top 10 Countries</th>
+	<th><a href="http://localhost:8888/Country_Aggregate.html">Click Here</a></th>
+	</tr>
+	<tr>
+	<th>Ebola Top 10 Tweeters</th>
+	<th><a href="http://localhost:8888/Ebola_Top10Users.html">Click Here</a></th>
+	</tr>
+	</div>
+	<div>
+	<img src="map.jpg" alt="Map" height="300" width="1000">
+	</div>
+    </form>
+    </section>
+</body>
+</html>
